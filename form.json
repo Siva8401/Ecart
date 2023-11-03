@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+<link rel="stylesheet" href="index.css">
+<title>E-CART 24/7</title>
+</head>
+<body>
+  <section>
+    <div class="form-boxes">
+      <div class="form-value">
+        <form id="signup-form">
+          <h2>Ecart-247 Sign up</h2>
+          <div class="inputbox">
+            <ion-icon name="person-sharp"></ion-icon>
+            <input type="text" id="name" required>
+            <label for="name">Your Name</label>
+          </div>
+          <div class="inputbox">
+            <ion-icon name="mail-sharp"></ion-icon>
+            <input type="email" id="email" required>
+            <label for="email">Email</label>
+          </div>
+          <div class="inputbox">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input type="password" id="password" required>
+            <label for="password">Password</label>
+          </div>
+          <div class="inputbox">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input type="password" id="confirm-password" required>
+            <label for="confirm-password">Confirm Password</label>
+          </div>
+          <div class="inputbox">
+            <ion-icon name="call-sharp"></ion-icon>
+            <input type="number" id="phone" required>
+            <label for="phone">Phone Number</label>
+          </div>
+          <button type="button" onclick="saveData()">Register Now</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    function saveData() {
+      // Collect form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirm-password').value;
+      const phoneNumber = document.getElementById('phone').value;
+
+      // Create a JSON object
+      const userData = {
+        name: name,
+        email: email,
+        password: password,
+        confirmPassword: confirmPassword,
+        phone: phoneNumber
+      };
+
+      // Convert the object to JSON
+      const jsonData = JSON.stringify(userData);
+
+      // You can now do something with the JSON data, such as send it to a server or store it locally
+      console.log(jsonData);
+    }
+  </script>
+</body>
+</html>
